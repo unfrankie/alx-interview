@@ -7,21 +7,20 @@ import sys
 
 def print_stats(total_size, status_codes):
     """
-    Prints the computed metrics.
+    Prints the computed metrics
     """
-    print("File size: {}".format(total_size))
+    print(f"File size: {total_size}")
     for code in sorted(status_codes.keys()):
         if status_codes[code] > 0:
-            print("{}: {}".format(code, status_codes[code]))
+            print(f"{code}: {status_codes[code]}")
 
 
 def main():
     """
-    Main function to read stdin and compute metrics.
+    Main function to read stdin and compute metrics
     """
     total_size = 0
-    status_codes = {code: 0 for code in [200, 301, 400, 401,
-                                         403, 404, 405, 500]}
+    status_codes = {code: 0 for code in [200, 301, 400, 401, 403, 404, 405, 500]}
     line_count = 0
 
     try:
