@@ -20,7 +20,8 @@ def main():
     Main function to read stdin and compute metrics
     """
     total_size = 0
-    status_codes = {code: 0 for code in [200, 301, 400, 401, 403, 404, 405, 500]}
+    status_codes = {code: 0 for code in [200, 301, 400, 401,
+                                         403, 404, 405, 500]}
     line_count = 0
 
     try:
