@@ -19,6 +19,7 @@ def isWinner(x, nums):
                 for j in range(i*i, n + 1, i):
                     sieve[j] = False
         return [i for i in range(2, n + 1) if sieve[i]]
+
     def play_round(n):
         """Simulate a round of the game and return the winner."""
         primes = sieve_of_eratosthenes(n)
@@ -33,6 +34,7 @@ def isWinner(x, nums):
             ben_moves += 1
             primes = [p for p in primes if p % prime != 0]
         return 'Maria' if maria_moves > ben_moves else 'Ben'
+
     maria_wins = ben_wins = 0
     for n in nums:
         winner = play_round(n)
