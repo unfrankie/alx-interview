@@ -14,9 +14,11 @@ def is_prime_sieve(n):
                 sieve[multiple] = False
     return sieve
 
+
 def count_primes_up_to_n(sieve, n):
     """Count the number of primes up to n using a sieve."""
     return sum(sieve[:n + 1])
+
 
 def isWinner(x, nums):
     """Determine the winner of the prime game."""
